@@ -1,5 +1,6 @@
 package cn.iocoder.yudao.module.system.framework.datapermission.config;
 
+import cn.iocoder.yudao.framework.datapermission.core.rule.warehouse.WarehouseDataPermissionRuleCustomizer;
 import cn.iocoder.yudao.module.system.dal.dataobject.dept.DeptDO;
 import cn.iocoder.yudao.module.system.dal.dataobject.user.AdminUserDO;
 import cn.iocoder.yudao.framework.datapermission.core.rule.dept.DeptDataPermissionRuleCustomizer;
@@ -22,6 +23,13 @@ public class DataPermissionConfiguration {
             rule.addDeptColumn(DeptDO.class, "id");
             // user
             rule.addUserColumn(AdminUserDO.class, "id");
+        };
+    }
+
+    @Bean
+    public WarehouseDataPermissionRuleCustomizer sysWarehouseDataPermissionRuleCustomizer() {
+        return rule -> {
+            rule.addWarehouseColumn(AdminUserDO.class);
         };
     }
 
