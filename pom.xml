@@ -22,6 +22,8 @@
         <module>yudao-module-mall</module>
         <module>yudao-module-erp</module>
         <module>yudao-module-crm</module>
+        <module>yudao-module-demo</module>
+        <module>yudao-module-demo/yudao-module-demo-biz</module>
     </modules>
 
     <name>${project.artifactId}</name>
