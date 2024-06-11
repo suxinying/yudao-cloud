@@ -122,3 +122,11 @@ yudao:
   access-log: # 访问日志的配置项
     enable: false
   demo: false # 关闭演示模式
+# rocketmq
+rocketmq:
+  name-server: sujiayizu.cn:9876
+  producer:
+    group: ${spring.application.name}_PRODUCER # 生产者分组
+  consumer:
+    group: yudao
+  enable: false
