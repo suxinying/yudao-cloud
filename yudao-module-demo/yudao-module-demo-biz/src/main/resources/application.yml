@@ -98,4 +98,9 @@ yudao:
   tenant: # 多租户相关配置项
     enable: true
 
+rocketmq:
+  name-server: sujiayizu.cn:9876
+  producer:
+      group: ${spring.application.name}_PRODUCER
+
 debug: false

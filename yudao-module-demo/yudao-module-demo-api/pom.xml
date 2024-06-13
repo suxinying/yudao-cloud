@@ -4,7 +4,7 @@
     <parent>
         <groupId>cn.iocoder.cloud</groupId>
         <artifactId>yudao-module-demo</artifactId>
-        <version>2.1.0-jdk8-snapshot</version>
+        <version>${revision}</version> <!-- 1. 修改 version 为 ${revision} -->
     </parent>
 
     <artifactId>yudao-module-demo-api</artifactId>
