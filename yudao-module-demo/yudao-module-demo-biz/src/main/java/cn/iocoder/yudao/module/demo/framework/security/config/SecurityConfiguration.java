@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 /**
  * Demo 模块的 Security 配置
@@ -33,5 +34,11 @@ public class SecurityConfiguration {
 
         };
     }
+
+    @Bean
+    UserDetailsService userDetailsService(){
+        return new DBUserDetailManager();
+    }
+
 
 }
